@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primaria">#71D578</color>
+    <color name="botao">#96D59A</color>
+    <color name="link">#0F3391</color>
+    <color name="barras">#CCF0CF</color>
+    <color name="textselecao">#085302</color>
+    <color name="painelpercorrer">#599862</color>
+    <color name="verdeclaro">#96D59A</color>
+    <color name="verdeescuro">#78B77E</color>
+</resources>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InfoTrilhaActivity">
+
+    <View
+        android:id="@+id/barrasuperior"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@color/barras"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/btn_voltar"
+        android:layout_width="29dp"
+        android:layout_height="25dp"
+        android:src="@drawable/voltar_btn"
+        app:layout_constraintTop_toTopOf="@id/barrasuperior"
+        app:layout_constraintBottom_toBottomOf="@id/barrasuperior"
+        app:layout_constraintStart_toStartOf="@id/barrasuperior"
+        android:layout_marginLeft="16dp"/>
+
+    <TextView
+        android:id="@+id/txt_nome_titulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Circuito Topo da Serra"
+        android:textColor="@color/textselecao"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/barrasuperior"
+        app:layout_constraintEnd_toEndOf="@id/barrasuperior"
+        app:layout_constraintBottom_toBottomOf="@id/barrasuperior"
+        android:gravity="center"
+        android:layout_marginBottom="8dp"/>
+
+    <ImageView
+        android:id="@+id/imagem_parque"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrasuperior"
+        android:src="@drawable/mirante_foto"
+        android:adjustViewBounds="true"/>
+    
+    <Button
+        android:id="@+id/btn_iniciar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="iniciar trilha"
+        android:textAllCaps="true"
+        android:backgroundTint="@color/verdeescuro"
+        android:textColor="@color/black"
+        app:cornerRadius="7dp"
+        app:layout_constraintTop_toBottomOf="@id/imagem_parque"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="16dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/info_trilha_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_iniciar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="8dp"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

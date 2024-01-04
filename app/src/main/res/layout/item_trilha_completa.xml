@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/barras">
+
+    <TextView
+        android:id="@+id/text_data_item"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="15/08/2023"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/text_nome_trilha_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/text_data_item"
+        app:layout_constraintStart_toStartOf="@id/text_data_item"
+        app:layout_constraintEnd_toStartOf="@id/label_tempo_gasto"
+        android:textStyle="bold"
+        android:layout_marginTop="4dp"
+        android:text="Trilha: Circuito Caminho do Passado"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/label_tempo_gasto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tempo gasto: 02:00:50"
+        app:layout_constraintTop_toTopOf="@id/text_data_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="16dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/txt_distancia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/label_tempo_gasto"
+        app:layout_constraintTop_toTopOf="@id/text_nome_trilha_item"
+        android:text="Mt: 4 km"
+        android:textColor="@color/black"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/textselecao"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="1dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

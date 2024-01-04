@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".UserFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pai"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imagem_avatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/avatar"
+            app:layout_constraintTop_toTopOf="@id/pai"
+            app:layout_constraintStart_toStartOf="@id/pai"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="40dp"/>
+
+        <TextView
+            android:id="@+id/text_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Maria"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="@id/imagem_avatar"
+            app:layout_constraintStart_toEndOf="@id/imagem_avatar"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:textSize="17sp"/>
+
+        <TextView
+            android:id="@+id/text_cidade_nome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ouro Branco, MG"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/text_user_name"
+            app:layout_constraintStart_toStartOf="@id/text_user_name"/>
+
+        <TextView
+            android:id="@+id/text_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nível 2"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="@id/text_user_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginRight="30dp"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:id="@+id/imagem_grafico1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imagem_avatar"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_marginTop="64dp"
+            android:src="@drawable/graficouser"/>
+
+        <ImageView
+            android:id="@+id/imagem_grafico2"
+            app:layout_constraintStart_toStartOf="@id/imagem_grafico1"
+            app:layout_constraintEnd_toEndOf="@id/imagem_grafico1"
+            app:layout_constraintTop_toTopOf="@id/imagem_grafico1"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:paddingRight="13dp"
+            android:src="@drawable/semigrafico"/>
+
+        <TextView
+            android:id="@+id/text_distancia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15 km\npercorridos"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="@id/imagem_grafico1"
+            app:layout_constraintStart_toStartOf="@id/imagem_grafico1"
+            app:layout_constraintEnd_toEndOf="@id/imagem_grafico1"
+            android:gravity="center"
+            android:layout_marginTop="38dp"/>
+
+        <TextView
+            android:id="@+id/text_falta_nivel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Faltam 10 km para o\npróximo nível"
+            app:layout_constraintTop_toBottomOf="@id/text_distancia"
+            app:layout_constraintStart_toStartOf="@id/text_distancia"
+            app:layout_constraintEnd_toEndOf="@id/text_distancia"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:layout_marginTop="8dp"/>
+
+        <View
+            android:id="@+id/view_dados_trilha"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            app:layout_constraintTop_toBottomOf="@id/imagem_grafico1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/topo_arredondado"
+            android:layout_marginTop="40dp"/>
+
+        <TextView
+            android:id="@+id/text_trilhas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/view_dados_trilha"
+            app:layout_constraintStart_toStartOf="@id/view_dados_trilha"
+            android:layout_marginLeft="64dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/cabin"
+            android:text="Trilhas"
+            android:textSize="17sp"
+            android:textColor="@color/textselecao"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/text_qr_code_coletado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="QrCodes"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="@id/text_trilhas"
+            app:layout_constraintEnd_toEndOf="@id/view_dados_trilha"
+            android:fontFamily="@font/cabin"
+            android:textSize="17sp"
+            android:layout_marginRight="64dp"/>
+
+        <View
+            android:id="@+id/view_ranking"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toBottomOf="@id/text_trilhas"
+            app:layout_constraintStart_toStartOf="@id/view_dados_trilha"
+            app:layout_constraintEnd_toEndOf="@id/view_dados_trilha"
+            android:background="@color/textselecao"
+            android:layout_marginTop="8dp"/>
+
+        <View
+            android:id="@+id/view_painel_percorreu"
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:background="@drawable/forma_arredondada"
+            app:cornerRadius="5dp"
+            app:layout_constraintTop_toTopOf="@id/view_ranking"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/txt_quantidade_listados"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Você percorreu\n7\ntrilhas até o momento"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="@id/view_painel_percorreu"
+            app:layout_constraintStart_toStartOf="@id/view_painel_percorreu"
+            app:layout_constraintEnd_toEndOf="@id/view_painel_percorreu"
+            app:layout_constraintBottom_toBottomOf="@id/view_painel_percorreu"
+            android:textColor="@color/white" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/lista_trilhas_QrCodes"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_dados_trilha"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
